@@ -20,7 +20,23 @@
     .btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
 .icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
 
-
+.hr-sect {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.35);
+	margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	background: rgba(0, 0, 0, 0.35);
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px;
+}
 
 
 </style>
@@ -39,7 +55,7 @@
         @*<button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-trash"></span>Clear Map</button>        
         <button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-trash"></span>Maker</button><br />
         <button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-cog"></span>Report</button>*@
-        <hr />
+        <div class="hr-sect">MENU</div>
         @*<li>Maker Map</li>
 
         <li>Report</li>
@@ -52,8 +68,47 @@
             <li><a href="#"><span class="fa fa-archive"></span> Clear Map</a></li>
             
         </ul><br>
-        <hr />
-        <button type="button" class="btn btn-default w" style="bottom:0; position: absolute; text-align:center; left:10px; width:100%"><span class="glyphicon glyphicon-calendar"></span>Get Service</button>                  
+
+        <div class="hr-sect">CONFIG</div>
+
+        <ul class="nav nav-tabs">
+            <li class="active Ftab"><a data-toggle="tab" href="#home1">Vehicle Working</a></li>
+            <li class="Ftab"><a data-toggle="tab" href="#menu2">Criteria</a></li>                     
+        </ul>
+
+        <div class="tab-content">
+            <div id="home1" class="tab-pane fade in active">
+                @*<input id="datepicker" width="270" />*@
+              
+                    <p> Date : <input type='text' class="form-control input-sm" id='datetimepicker4' style="width: 40%; " /></p>
+
+                    <div class="" style="width: 40%;">
+
+                        <select id="selectZone" class="form-control">
+                            <option>select zone</option>
+                            <option value="BKK">BKK</option>
+                            <option value="East">East</option>
+                            <option value="North">North</option>
+                            <option value="Northeast">Northeast</option>
+                            <option value="West">West</option>
+                        </select>
+                    </div>
+                
+                    @*<div class="checkbox disabled">
+                <label><input type="checkbox" value="" disabled>Option 3</label>
+            </div>*@
+                </div>
+            <div id="menu2" class="tab-pane fade">
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">Priority</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="">SLA</label>
+                </div>
+            </div>                       
+        </div>
+
+        <button type="button" class="btn btn-default w" style="bottom:0; position: absolute; text-align:center; left:10px; width:90%"><span class="glyphicon glyphicon-calendar"></span>Get Service</button>                  
     </div>
     
     <div id="menu1" class="tab-pane fade">

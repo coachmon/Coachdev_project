@@ -11,14 +11,14 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6_DOviZG6h9qdMYi4IysTO8fvw4jzR5w"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-          @*<link href="~/Content/GenCss/button1.css" rel="stylesheet" />*@
 
-    @*<link href="~/Content/GenCss/button.css" rel="stylesheet" />*@
+    <link href="~/Content/GenCss/datepicker.css" rel="stylesheet" />
+   
+
+    <script src="~/Scripts/GenJS/bootstrap-datepicker.js"></script>
    
     <style type="text/css">     
-     .sidenav {
-      /*background-color: #f1f1f1;*/
-     /*height: 100%;*/
+     .sidenav {     
       font-family: Arial, Helvetica, sans-serif; 
       border: 1px solid black;  
          
@@ -26,26 +26,119 @@
      body{
          font-size: 13px;
           font-family: Arial, Helvetica, sans-serif; 
-     }       
+     }  
+     
+     .example-2, .example-3, .example-4, .example-5, .example-6 {
+   
+   border: 1px solid #ddd;
+    border-radius: 4px;
+  } 
+  .example-flex {
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+  }
+  .example-flex-reverse {
+    flex-direction: row-reverse;
+  }
+  #one, #two {
+    padding: 20px;
+  }
+  #one p {
+    padding: 0;
+  }
+   /*.example-4, .example-5 {
+    height: 500px;
+  } 
+  #nine {
+  	bottom: 0px;
+  }*/
+  .split p, .split-flex p {
+    padding: 20px;
+  }
+  .split, .split-flex {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 100px;
+  }
+  /*.gutter.gutter-horizontal {
+    background-image: url('grips/vertical.png');
+    cursor: ew-resize;
+  }
+  .gutter.gutter-vertical {
+    background-image: url('grips/horizontal.png');
+    cursor: ns-resize;
+  }*/
+  .split.split-horizontal, .gutter.gutter-horizontal {
+    height: 100%;
+    float: left;
+  }     
   
     </style>
 </head>
 <body>                    
     <div class="container-fluid">
         <div class="row content">
-            <div class="col-sm-2" id="side" >
+            <div class="col-sm-3" id="side" >
                
                 @RenderBody()
              
             </div>
 
-            <div class="col-sm-10" >                            
-                <div id="map1" style="width: 100%; background-color:black; ">
-                </div>                  
+            <div class="col-sm-9" style="border-left: 1px solid black;" >                            
+               
+                
+                    <div class="row">
+                        @*<div class="example-4">*@
+                        <div id="spliting">
+                            <div id="eight" class="split split-vertical">
+                                <div id="map1" style="width: 100%; background-color:black; ">
+                                </div>
+                            </div>
+                            <div id="nine" class="split split-vertical">
+                                <div class="container">  
+  				  <ul class="nav nav-tabs">
+  				    <li class="active"><a data-toggle="tab" href="#home">TIMELINE</a></li>
+  				    <li><a data-toggle="tab" href="#menu11">PLAN</a></li>
+  				    <li><a data-toggle="tab" href="#menu21">LISTORDER</a></li>
+  				   
+  				  </ul>
+
+  				  <div class="tab-content">
+  				    <div id="home" class="tab-pane fade in active">
+  				     
+  				    </div>
+  				    <div id="menu11" class="tab-pane fade">
+  				     
+  				    </div>
+  				    <div id="menu21" class="tab-pane fade">
+  				     
+  				    </div>
+  				    
+                    </div>
+                  </div>
+
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+               
+                           
             </div>
         </div>
     </div>
-
+    <script src="~/Scripts/GenJS/split.js"></script>
+   
     <script>//// Map
         var mapOptions1 = {
             zoom: 10,
@@ -67,13 +160,40 @@
     </script> 
    
 </body>
-<script type="text/javascript">     
-    $('#map1').css("height", window.innerHeight);
-    $('#side').css("height", window.innerHeight -10);
-    var w = window.innerWidth;
 
+<script type="text/javascript">     
+    //$('#map1').css("height", window.innerHeight);
+    //$('#eight').css("height", window.innerHeight -200);
+    $('#side').css("height", window.innerHeight - 10);
+    
+    $('#spliting').css("height", window.innerHeight);
+    var w = window.innerWidth;
+    console.log($('#spliting'));
+
+    var _split = $('#spliting').height();
+    //$('#map1').css("height", _split - 300);
+    //$('#eight').css("height", _split - 300);
+    $('#map1').css("height", 649);
+    $('#eight').css("height", 649);
+
+    var _eight = $('#eight').height();
+    //$('#nine').css("height", _eight - 50);
+    $('#nine').css("height", 100);
+   
     //console.log("height", window.innerHeight);
-  
+    
+
+
+
+
+    $(function () {
+        $('#datetimepicker4').datepicker();
+    });
+    Split(['#eight', '#nine'], {
+        direction: 'vertical'
+        //sizes: ['200px', '500px']
+
+    });
     
 </script>
 
