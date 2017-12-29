@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachDev</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6_DOviZG6h9qdMYi4IysTO8fvw4jzR5w"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          @*<link href="~/Content/GenCss/button1.css" rel="stylesheet" />*@
+
+    @*<link href="~/Content/GenCss/button.css" rel="stylesheet" />*@
+   
+    <style type="text/css">     
+     .sidenav {
+      /*background-color: #f1f1f1;*/
+     /*height: 100%;*/
+      font-family: Arial, Helvetica, sans-serif; 
+      border: 1px solid black;  
+         
+    }    
+     body{
+         font-size: 13px;
+          font-family: Arial, Helvetica, sans-serif; 
+     }       
+  
+    </style>
+</head>
+<body>                    
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-2" id="side" >
+               
+                @RenderBody()
+             
+            </div>
+
+            <div class="col-sm-10" >                            
+                <div id="map1" style="width: 100%; background-color:black; ">
+                </div>                  
+            </div>
+        </div>
+    </div>
+
+    <script>//// Map
+        var mapOptions1 = {
+            zoom: 10,
+            center: new google.maps.LatLng(13.756309, 100.532647),
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+        try {
+
+
+            var mapElement1 = document.getElementById('map1');
+            var map = new google.maps.Map(mapElement1, mapOptions1);
+            var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+
+            var directionsService = new google.maps.DirectionsService();
+            var directionsDisplay = new google.maps.DirectionsRenderer();
+        } catch (e) {
+            console.log("No map");
+        }
+    </script> 
+   
+</body>
+<script type="text/javascript">     
+    $('#map1').css("height", window.innerHeight);
+    $('#side').css("height", window.innerHeight -10);
+    var w = window.innerWidth;
+
+    //console.log("height", window.innerHeight);
+  
+    
+</script>
+
+</html>

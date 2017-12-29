@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .Ftab {
+        width:50%;
+        text-align:center;
+            font-family: Arial, Helvetica, sans-serif; 
+    }
+    .bt {
+    position: absolute;
+    top: 50%;
+    text-align:center;
+}
+  .w{
+     margin-top:20px; 
+     color:#777;
+        
+  }
+    .btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
+.icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
+
+
+
+
+</style>
+<br />
+<ul class="nav nav-tabs">
+    <li class="active Ftab " style="width:50%;"><a data-toggle="tab" href="#home"> Home</a></li>
+    <li class="Ftab "><a data-toggle="tab" href="#menu1" > Result</a></li>
+    
+</ul>
+
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+        @*<button type="button" class="btn btn-primary btn-lg btn3d " style="text-align: center; width:80%; margin-left: 40px;" ><span class="glyphicon glyphicon-cloud"></span> </button>*@
+        @*<a class="btn icon-btn btn-primary" href="#" style="margin-top:20px;  "><span class="glyphicon btn-glyphicon glyphicon-sort img-circle text-primary" style="text-align:left;"></span>Get Unassign</a>*@
+        <button type="button" class="btn btn-default w" style="width:100%"><span class="fa fa-car"></span> Get Unassign</button>  <br />  
+        @*<button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-trash"></span>Clear Map</button>        
+        <button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-trash"></span>Maker</button><br />
+        <button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-cog"></span>Report</button>*@
+        <hr />
+        @*<li>Maker Map</li>
+
+        <li>Report</li>
+        <li>Clear Map</li>*@
+        <ul class="nav nav-pills nav-stacked">
+            <li class=""><a href="#section1"> <span class="fa fa-map-pin"></span> Show Maker</a></li> 
+            <li><a href="#"><span class="fa fa-bar-chart"></span> Show Timeline</a></li>
+            <li><a href="#"><span class="fa fa-bars"></span> Compare</a></li>
+            <li><a href="#"><span class="fa fa-print"></span> Report</a></li>             
+            <li><a href="#"><span class="fa fa-archive"></span> Clear Map</a></li>
+            
+        </ul><br>
+        <hr />
+        <button type="button" class="btn btn-default w" style="bottom:0; position: absolute; text-align:center; left:10px; width:100%"><span class="glyphicon glyphicon-calendar"></span>Get Service</button>                  
+    </div>
+    
+    <div id="menu1" class="tab-pane fade">
+       
+        
+    </div>
+    
+</div>
+
+

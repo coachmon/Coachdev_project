@@ -1,0 +1,238 @@
+﻿html {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+  font-weight: 300;
+}
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.5;
+  position: relative;
+  cursor: default;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.row {
+  margin: 0 1.04167%;
+  padding: 1.5rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 110rem;
+}
+.row:after {
+  clear: both;
+  content: " ";
+  display: table;
+  height: 0;
+  visibility: hidden;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #35b9ff;
+  text-decoration: none !important;
+  line-height: inherit;
+}
+
+a:hover {
+  color: #1cb0ff;
+  transition: all 0.2s ease-in-out;
+}
+
+a:focus {
+  color: #1cb0ff;
+}
+
+p a, p a:visited {
+  line-height: inherit;
+}
+
+hr {
+  border: 1px solid #ededed;
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  border-bottom: 2px solid #efefef;
+  font-weight: 100;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+  cursor: pointer;
+}
+h1:after {
+  content: '+';
+  color: #afafaf;
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+  position: relative;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+h2 {
+  font-size: 3.75rem;
+}
+
+h3 {
+  font-size: 3.25rem;
+}
+
+p, ul, li {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+button, .button {
+  background: #35b9ff;
+  border: 2px solid #02a7ff;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin: 1rem 0.5rem 0;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+button.alert, .button.alert {
+  background: #f85e5a;
+  border: 2px solid #f62e29;
+}
+button.alert:hover, .button.alert:hover {
+  background: #f62e29;
+}
+button.success, .button.success {
+  background: #43ac6a;
+  border: 2px solid #358753;
+}
+button.success:hover, .button.success:hover {
+  background: #358753;
+}
+button:first-of-type, .button:first-of-type {
+  margin-left: 0;
+}
+button:focus, .button:focus {
+  outline: none;
+}
+button:hover, .button:hover {
+  background: #02a7ff;
+}
+
+.header span {
+  color: #707070;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  top: -8px;
+}
+
+.accordion-demo {
+  margin: 2rem 0;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+}
+.tabs dd {
+  background: #f7fcff;
+  border: 2px solid #b5e5ff;
+  border-left: none;
+  display: block;
+  flex: 1;
+  padding-top: 1rem;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+.tabs dd:hover {
+  background: #e8f7ff;
+}
+.tabs dd:first-of-type {
+  border-left: 2px solid #b5e5ff;
+}
+.tabs dd.active {
+  background: white;
+  border-top: 1rem solid #b5e5ff;
+  border-bottom: none;
+  font-weight: bold;
+}
+.tabs dd.active a {
+  color: #0076b5;
+}
+.tabs dd a {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+.tabs-content {
+  background: white;
+}
+.tabs-content .content {
+  border: 2px solid #b5e5ff;
+  color: #00659b;
+  display: none;
+  margin-top: -2px;
+  padding: 4rem;
+}
+.tabs-content .content.active {
+  display: block;
+}
+.tabs-content .content p {
+  margin: 0;
+}
