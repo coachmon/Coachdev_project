@@ -1,45 +1,7 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<style>
-    .Ftab {
-        width:50%;
-        text-align:center;
-            font-family: Arial, Helvetica, sans-serif; 
-    }
-    .bt {
-    position: absolute;
-    top: 50%;
-    text-align:center;
-}
-  .w{
-     margin-top:20px; 
-     color:#777;
-        
-  }
-    .btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
-.icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
 
-.hr-sect {
-	display: flex;
-	flex-basis: 100%;
-	align-items: center;
-	color: rgba(0, 0, 0, 0.35);
-	margin: 8px 0px;
-}
-.hr-sect::before,
-.hr-sect::after {
-	content: "";
-	flex-grow: 1;
-	background: rgba(0, 0, 0, 0.35);
-	height: 1px;
-	font-size: 0px;
-	line-height: 0px;
-	margin: 0px 8px;
-}
-
-
-</style>
 <br />
 <ul class="nav nav-tabs">
     <li class="active Ftab " style="width:50%;"><a data-toggle="tab" href="#home"> Home</a></li>
@@ -51,64 +13,62 @@
     <div id="home" class="tab-pane fade in active">
         @*<button type="button" class="btn btn-primary btn-lg btn3d " style="text-align: center; width:80%; margin-left: 40px;" ><span class="glyphicon glyphicon-cloud"></span> </button>*@
         @*<a class="btn icon-btn btn-primary" href="#" style="margin-top:20px;  "><span class="glyphicon btn-glyphicon glyphicon-sort img-circle text-primary" style="text-align:left;"></span>Get Unassign</a>*@
-        <button type="button" class="btn btn-default w" style="width:100%"><span class="fa fa-car"></span> Get Unassign</button>  <br />  
+        <button type="button" class="btn btn-default w" style="width:100%"><span class="fa fa-car"></span> text</button>  <br />  
         @*<button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-trash"></span>Clear Map</button>        
         <button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-trash"></span>Maker</button><br />
         <button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-cog"></span>Report</button>*@
-        <div class="hr-sect">MENU</div>
+        <div class="hr-sect">text</div>
         @*<li>Maker Map</li>
 
         <li>Report</li>
         <li>Clear Map</li>*@
         <ul class="nav nav-pills nav-stacked">
-            <li class=""><a href="#section1"> <span class="fa fa-map-pin"></span> Show Maker</a></li> 
-            <li><a href="#"><span class="fa fa-bar-chart"></span> Show Timeline</a></li>
-            <li><a href="#"><span class="fa fa-bars"></span> Compare</a></li>
-            <li><a href="#"><span class="fa fa-print"></span> Report</a></li>             
-            <li><a href="#"><span class="fa fa-archive"></span> Clear Map</a></li>
+            <li class=""><a href="#section1"> <span class="fa fa-map-pin"></span> text</a></li> 
+            <li><a href="#"><span class="fa fa-bar-chart"></span> text</a></li>
+            <li><a href="#"><span class="fa fa-bars"></span> text</a></li>
+            <li><a href="#"><span class="fa fa-print"></span> text</a></li>             
+            <li><a href="#"><span class="fa fa-archive"></span> text</a></li>
             
         </ul><br>
 
-        <div class="hr-sect">CONFIG</div>
+        @*<div class="hr-sect">CONFIG</div>
 
         <ul class="nav nav-tabs">
             <li class="active Ftab"><a data-toggle="tab" href="#home1">Vehicle Working</a></li>
             <li class="Ftab"><a data-toggle="tab" href="#menu2">Criteria</a></li>                     
-        </ul>
+        </ul>*@
 
-        <div class="tab-content">
-            <div id="home1" class="tab-pane fade in active">
-                @*<input id="datepicker" width="270" />*@
-              
-                    <p> Date : <input type='text' class="form-control input-sm" id='datetimepicker4' style="width: 40%; " /></p>
+        @*<div class="tab-content">
+        <div id="home1" class="tab-pane fade in active">
+            <input id="datepicker" width="270" />
 
-                    <div class="" style="width: 40%;">
+                <p> Date : <input type='text' class="form-control input-sm" id='datetimepicker4' style="width: 40%; " /></p>
 
-                        <select id="selectZone" class="form-control">
-                            <option>select zone</option>
-                            <option value="BKK">BKK</option>
-                            <option value="East">East</option>
-                            <option value="North">North</option>
-                            <option value="Northeast">Northeast</option>
-                            <option value="West">West</option>
-                        </select>
-                    </div>
-                
-                    @*<div class="checkbox disabled">
-                <label><input type="checkbox" value="" disabled>Option 3</label>
-            </div>*@
+                <div class="" style="width: 40%;">
+
+                    <select id="selectZone" class="form-control">
+                        <option>select zone</option>
+                        <option value="BKK">BKK</option>
+                        <option value="East">East</option>
+                        <option value="North">North</option>
+                        <option value="Northeast">Northeast</option>
+                        <option value="West">West</option>
+                    </select>
                 </div>
-            <div id="menu2" class="tab-pane fade">
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Priority</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">SLA</label>
-                </div>
-            </div>                       
+
+
+            </div>
+        <div id="menu2" class="tab-pane fade">
+            <div class="checkbox">
+                <label><input type="checkbox" value="">Priority</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="">SLA</label>
+            </div>
         </div>
+    </div>*@
 
-        <button type="button" class="btn btn-default w" style="bottom:0; position: absolute; text-align:center; left:10px; width:90%"><span class="glyphicon glyphicon-calendar"></span>Get Service</button>                  
+        <button type="button" class="btn btn-default w" style="bottom:0; position: initial; text-align:center; left:10px; width:100%"><span class="glyphicon glyphicon-calendar"></span>text</button>                  
     </div>
     
     <div id="menu1" class="tab-pane fade">

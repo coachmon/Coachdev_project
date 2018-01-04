@@ -1,0 +1,65 @@
+﻿ .sidenav {     
+      font-family: Arial, Helvetica, sans-serif; 
+      border: 1px solid black;  
+         
+    }    
+     body{
+         font-size: 13px;
+          font-family: Arial, Helvetica, sans-serif; 
+     }  
+     
+     .example-2, .example-3, .example-4, .example-5, .example-6 {
+   
+   border: 1px solid #ddd;
+    border-radius: 4px;
+  } 
+  .example-flex {
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+  }
+  .example-flex-reverse {
+    flex-direction: row-reverse;
+  }
+  #one, #two {
+    padding: 20px;
+  }
+  #one p {
+    padding: 0;
+  }
+   /*.example-4, .example-5 {
+    height: 500px;
+  } 
+  #nine {
+  	bottom: 0px;
+  }*/
+  .split p, .split-flex p {
+    padding: 20px;
+  }
+  .split, .split-flex {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .gutter {
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 100px;
+  }
+  /*.gutter.gutter-horizontal {
+    background-image: url('grips/vertical.png');
+    cursor: ew-resize;
+  }
+  .gutter.gutter-vertical {
+    background-image: url('grips/horizontal.png');
+    cursor: ns-resize;
+  }*/
+  .split.split-horizontal, .gutter.gutter-horizontal {
+    height: 100%;
+    float: left;
+  }     

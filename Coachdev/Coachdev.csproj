@@ -216,6 +216,8 @@
     <Content Include="Content\GenCss\button1.css" />
     <Content Include="Content\GenCss\datepicker.css" />
     <Content Include="Content\GenCss\Tab.css" />
+    <Content Include="Content\GenCss\_index.css" />
+    <Content Include="Content\GenCss\_layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -238,6 +240,7 @@
     <Content Include="Scripts\GenJS\bootstrap-datepicker.js" />
     <Content Include="Scripts\GenJS\split.js" />
     <Content Include="Scripts\GenJS\tab.js" />
+    <Content Include="Scripts\GenJS\_layout.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
