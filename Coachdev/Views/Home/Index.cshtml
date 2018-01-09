@@ -4,78 +4,185 @@
 
 <br />
 <ul class="nav nav-tabs">
-    <li class="active Ftab " style="width:50%;"><a data-toggle="tab" href="#home"> Home</a></li>
-    <li class="Ftab "><a data-toggle="tab" href="#menu1" > Result</a></li>
+    <li class="active Ftab " style="width:50%;"><a data-toggle="tab" href="#home"> HOME</a></li>
+    <li class="Ftab "><a data-toggle="tab" href="#menu1" > RESULT</a></li>
     
 </ul>
 
 <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-        @*<button type="button" class="btn btn-primary btn-lg btn3d " style="text-align: center; width:80%; margin-left: 40px;" ><span class="glyphicon glyphicon-cloud"></span> </button>*@
-        @*<a class="btn icon-btn btn-primary" href="#" style="margin-top:20px;  "><span class="glyphicon btn-glyphicon glyphicon-sort img-circle text-primary" style="text-align:left;"></span>Get Unassign</a>*@
-        <button type="button" class="btn btn-default w" style="width:100%"><span class="fa fa-car"></span> text</button>  <br />  
-        @*<button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-trash"></span>Clear Map</button>        
-        <button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-trash"></span>Maker</button><br />
-        <button type="button" class="btn btn-default w"><span class="glyphicon glyphicon-cog"></span>Report</button>*@
-        <div class="hr-sect">text</div>
-        @*<li>Maker Map</li>
+        <button type="button" class="btn btn-info w" style="width:100%"><span class="fa fa-file"></span> Import File</button>  <br />
+        <br />
+        <p>Ship to :</p>
+        <div style="border:1px ; height: 70px;">
+            <i class="fa fa-map-marker" aria-hidden="true" style="color:red"> </i> <input placeholder="Start Point" type="text" value="" class="g" style="width:50%" /><button class="btn btn-primary btn-xs">X</button><br />
 
-        <li>Report</li>
-        <li>Clear Map</li>*@
-        <ul class="nav nav-pills nav-stacked">
-            <li class=""><a href="#section1"> <span class="fa fa-map-pin"></span> text</a></li> 
-            <li><a href="#"><span class="fa fa-bar-chart"></span> text</a></li>
-            <li><a href="#"><span class="fa fa-bars"></span> text</a></li>
-            <li><a href="#"><span class="fa fa-print"></span> text</a></li>             
-            <li><a href="#"><span class="fa fa-archive"></span> text</a></li>
-            
-        </ul><br>
+            <i class="fa fa-map-marker" aria-hidden="true" style="color:orange"> </i> <input placeholder="End Point" type="text" value="" class="g" style="width:50%" /><button class="btn btn-primary btn-xs">X</button>
 
-        @*<div class="hr-sect">CONFIG</div>
+            @*<div class='Option'><input type='text' name='txtTest' /> <span class='Delete'>Delete</span></div>
+                <span class='Add'>Add Option</span>*@
 
-        <ul class="nav nav-tabs">
-            <li class="active Ftab"><a data-toggle="tab" href="#home1">Vehicle Working</a></li>
-            <li class="Ftab"><a data-toggle="tab" href="#menu2">Criteria</a></li>                     
-        </ul>*@
-
-        @*<div class="tab-content">
-        <div id="home1" class="tab-pane fade in active">
-            <input id="datepicker" width="270" />
-
-                <p> Date : <input type='text' class="form-control input-sm" id='datetimepicker4' style="width: 40%; " /></p>
-
-                <div class="" style="width: 40%;">
-
-                    <select id="selectZone" class="form-control">
-                        <option>select zone</option>
-                        <option value="BKK">BKK</option>
-                        <option value="East">East</option>
-                        <option value="North">North</option>
-                        <option value="Northeast">Northeast</option>
-                        <option value="West">West</option>
-                    </select>
+            @*<div id='TextBoxesGroup'>
+                    <div id="TextBoxDiv1">
+                        <label>Textbox #1 : </label><input type='text' id='textbox1'>
+                    </div>
                 </div>
+                <input type='button' value='Add Button' id='addButton'>
+                <input type='button' value='Remove Button' id='removeButton'>
+                <input type='button' value='Get TextBox Value' id='getButtonValue'>*@
 
-
-            </div>
-        <div id="menu2" class="tab-pane fade">
-            <div class="checkbox">
-                <label><input type="checkbox" value="">Priority</label>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox" value="">SLA</label>
-            </div>
         </div>
-    </div>*@
+        <br />
 
-        <button type="button" class="btn btn-default w" style="bottom:0; position: initial; text-align:center; left:10px; width:100%"><span class="glyphicon glyphicon-calendar"></span>text</button>                  
+        <button class="btn btn-success">Add Point</button> <button class="btn btn-warning">Edite Point</button> 
+
+        <p>Setting :</p>
+        <div style="border:1px solid black; height: 150px; border-radius: 8px;">
+
+
+            <div class="row">
+                <div class="col-sm-6"><p class="c"> Start Date :</p><input type='text' class="ct" id='datetimepicker4' value="01/01/2018" /></div>
+                <div class="col-sm-6"><p class="c"> Start Time :</p><input id="input-a" class="ct" value="00:00" data-default="20:48"></div>
+                <div class="row">                  
+                    @*<div class="col-sm-6"><p style="margin-left: 20px"> Loading Time :</p><a id="down" href="#" onclick="updateSpinner(this);" style="margin-left: 20px">-</a><input id="content" value="30" type="text" style="width:30px" /><a id="up" href="#" onclick="updateSpinner(this);">+</a> Min</div>*@
+                  
+                    <div class="col-sm-6"><p style="margin-left:30px;"> Working Hour :</p><input type="number" name="points" step="5" value="30" style="margin-left:30px; width:40%"> Min</div>    
+                     <div class="col-sm-6"><p class="c"> Working Hour :</p><input type="number" name="name" value="8" style="width: 40%; margin-left: 10px;" /> Hr</div>                   
+                </div>             
+            </div>
+            <br />
+
+            <p>Criteria :</p>
+            <div style="border:1px solid black; height: 120px; border-radius: 8px;">
+                @*<p class="c">Calculate Route Option:</p>
+                <form action="" style="padding-left: 20px;">
+                    <input type="radio" name="gender" value="male"> Distance<br>
+                    <input type="radio" name="gender" value="female"> Duration Time<br>
+                    <input type="radio" name="gender" value="f"> Express Way<br>
+
+                </form>*@
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="c">Route Option:</p>
+                        <form action="" style="padding-left: 10px;">
+                            <input type="radio" name="gender" value="male"> Distance<br>
+                            <input type="radio" name="gender" value="female"> Duration Time<br>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="c">Calculate Option:</p>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Express Way</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Time Windows</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*<div class="hr-sect">text</div>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class=""><a href="#section1"> <span class="fa fa-map-pin"></span> text</a></li>
+                    <li><a href="#"><span class="fa fa-bar-chart"></span> text</a></li>
+                    <li><a href="#"><span class="fa fa-bars"></span> text</a></li>
+                    <li><a href="#"><span class="fa fa-print"></span> text</a></li>
+                    <li><a href="#"><span class="fa fa-archive"></span> text</a></li>
+
+                </ul><br>*@
+
+            @* concocnocncocncon *@
+            @*<div class="hr-sect">text</div>*@
+
+                    @*<ul class="nav nav-tabs" style="padding-top: 20px">
+                        <li class="active Ftab"><a data-toggle="tab" href="#home1">Setting</a></li>
+                        <li class="Ftab"><a data-toggle="tab" href="#menu2">Criteria</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                    <div id="home1" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-sm-6"><p class="c"> Start Date :</p><input type='text' class="ct" id='datetimepicker4' value="01/01/2018" /></div>
+                            <div class="col-sm-6"><p class="c"> Start Time :</p><input id="input-a" class="ct" value="00:00" data-default="20:48"></div>
+                            <div class="row">                                
+                                <div class="col-sm-6"><p style="margin-left: 20px"> Loading Time :</p><a id="down" href="#" onclick="updateSpinner(this);" style="margin-left: 20px">-</a><input id="content" value="30" type="text" style="width:30px" /><a id="up" href="#" onclick="updateSpinner(this);">+</a> Min</div>
+                                <div class="col-sm-6"><p class="c"> Working Hour :</p><input type="number" name="name" value="8" style="width: 30%; margin-left: 10px;" /> Hr</div>                                
+                            </div>
+                        </div>                      
+                        </div>
+
+                    <div id="menu2" class="tab-pane fade">                       
+                        <div class="row">
+                            <div class="col-sm-6"><p class="c">Route Option:</p>
+                                <form action="" style="padding-left: 10px;">
+                                    <input type="radio" name="gender" value="male"> Distance<br>
+                                    <input type="radio" name="gender" value="female"> Duration Time<br>
+                                </form></div>
+                                                            <div class="col-sm-6"><p class="c">Calculate Option:</p>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Express Way</label>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">Time Windows</label>
+                                </div></div>                                                    
+                        </div>
+                    </div>
+                </div>*@
+
+            @* concocnocncocncon *@
+
+
+            <button type="button" class="btn btn-primary w " style="bottom:0; position: initial; text-align:center; left:10px; width:100%"><span class="fa fa-car"></span> PLAN</button>
+        </div>
+
     </div>
-    
+    @* result *@
     <div id="menu1" class="tab-pane fade">
-       
+
+        <div class="input-group" style="margin-top: 20px;">
+            <input type="text" class="form-control" placeholder="Search"/>
+            <span class="input-group-addon">
+                <i class="fa fa-search"></i>
+            </span>
+        </div>
+
+        <div class="hr-sect">PLAN</div>
+
+        <table >
+            <tr data-show-child="1" style="text-align:center;"><td colspan="3"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true" style="color:red;"></i> |<td>Customer C |</td><td> Customer N |</td><td> Start Date |</td><td> Arive |</td><td> Departure |</td></tr>
+            <tr class="child child-1"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-1"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-1"><td>1</td><td>2</td><td>3</td></tr>
+            <tr data-show-child="2"><td colspan="3"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true" style="color:blue;"></i> |<td>Customer C |</td><td> Customer N |</td><td> Start Date |</td><td> Arive |</td><td> Departure |</td></tr>
+            <tr class="child child-2"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-2"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-2"><td>1</td><td>2</td><td>3</td></tr>
+            <tr data-show-child="3" style="text-align:center;"><td colspan="3"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true" style="color:green;"></i> |<td>Customer C |</td><td> Customer N |</td><td> Start Date |</td><td> Arive |</td><td> Departure |</td></tr>
+            <tr class="child child-3"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-3"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-3"><td>1</td><td>2</td><td>3</td></tr>
+            <tr data-show-child="4"><td colspan="3"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true" style="color:yellow;"></i> |<td>Customer C |</td><td> Customer N |</td><td> Start Date |</td><td> Arive |</td><td> Departure |</td></tr>
+            <tr class="child child-4"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-4"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-4"><td>1</td><td>2</td><td>3</td></tr>
+            <tr data-show-child="5" style="text-align:center;"><td colspan="3"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true" style="color:mediumpurple;"></i> |<td>Customer C |</td><td> Customer N |</td><td> Start Date |</td><td> Arive |</td><td> Departure |</td></tr>
+            <tr class="child child-5"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-5"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-5"><td>1</td><td>2</td><td>3</td></tr>
+            <tr data-show-child="6"><td colspan="3"><i class="fa fa-arrow-right" aria-hidden="true"></i><i class="fa fa-car" aria-hidden="true" style="color:brown;"></i> |<td>Customer C |</td><td> Customer N |</td><td> Start Date |</td><td> Arive |</td><td> Departure |</td></tr>
+            <tr class="child child-6"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-6"><td>1</td><td>2</td><td>3</td></tr>
+            <tr class="child child-6"><td>1</td><td>2</td><td>3</td></tr>
+        </table>
         
     </div>
     
 </div>
-
+<script type="text/javascript">
+    $('tr').click(function (evt) {
+        console.log($(this).data('show-child'));
+    $('tr.child-'+$(this).data('show-child')).toggle('fast');
+});
+</script>
 

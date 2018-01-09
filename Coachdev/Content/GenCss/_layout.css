@@ -1,11 +1,19 @@
-﻿ .sidenav {     
-      font-family: Arial, Helvetica, sans-serif; 
+﻿ 
+ @font-face {
+    font-family: 'thaisansneue-regular';
+    src: url('../font/thaisansneue-regular.ttf') format('truetype');
+} 
+
+.sidenav {     
+      /*font-family: Arial, Helvetica, sans-serif;*/ 
       border: 1px solid black;  
          
     }    
      body{
-         font-size: 13px;
-          font-family: Arial, Helvetica, sans-serif; 
+         font-size: 17px;
+          /*font-family: Arial, Helvetica, sans-serif;*/ 
+          font-family: 'thaisansneue-regular';
+    
      }  
      
      .example-2, .example-3, .example-4, .example-5, .example-6 {
@@ -62,4 +70,9 @@
   .split.split-horizontal, .gutter.gutter-horizontal {
     height: 100%;
     float: left;
-  }     
+  } 
+ 
+  a
+{
+    text-decoration: none;
+}

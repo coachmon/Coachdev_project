@@ -6,21 +6,25 @@
     <title>CoachDev</title>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="~/Content/GenCss/_layout.css" rel="stylesheet" />
+    <link href="~/Content/GenCss/_index.css" rel="stylesheet" />    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="~/Content/GenCss/datepicker.css" rel="stylesheet" />   
-    <link href="~/Content/GenCss/_layout.css" rel="stylesheet" />
-    <link href="~/Content/GenCss/_index.css" rel="stylesheet" />
+
+    <link href="~/Content/GenCss/jquery-clockpicker.min.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6_DOviZG6h9qdMYi4IysTO8fvw4jzR5w"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">     
+    @*<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">*@     
     <script src="~/Scripts/GenJS/bootstrap-datepicker.js"></script>
+    <script src="~/Scripts/GenJS/jquery-clockpicker.min.js"></script>
+    <script src="~/Scripts/GenJS/_index.js"></script>
 
     
-   
+
 </head>
-<body>                    
+<body>
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3" id="side">
@@ -29,9 +33,10 @@
 
             </div>
             <mon></mon>
-            <div class="col-sm-9" style="border-left: 1px solid black;">
+            <div class="col-sm-9" style="border-left: 1px; ">
                 <div class="row">
                     <div id="map1" style="width: 100%; background-color:black; ">
+
                         @*<div class="example-4">*@
                         @*<div id="spliting">
                                 <div id="eight" class="split split-vertical">
@@ -60,15 +65,22 @@
                                     </div>
                                 </div>
                             </div>*@
+
                         <br>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @*<script src="~/Scripts/GenJS/split.js"></script>*@
-        <script src="~/Scripts/GenJS/_layout.js"></script>
-    <script>//// Map
+</body>
+
+
+
+</html>
+@*<script src="~/Scripts/GenJS/split.js"></script>*@
+<script src="~/Scripts/GenJS/_layout.js"></script>
+<script>
+//// Map
         var mapOptions1 = {
             zoom: 10,
             center: new google.maps.LatLng(13.756309, 100.532647),
@@ -86,11 +98,11 @@
         } catch (e) {
             console.log("No map");
         }
-       // $('#map1').css("height", window.innerHeight);
-    </script> 
-   
-</body>
+    // $('#map1').css("height", window.innerHeight);
 
+        var input = $('#input-a');
+        input.clockpicker({
+            autoclose: true
+        });
 
-
-</html>
+</script> 

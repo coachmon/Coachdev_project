@@ -1,7 +1,7 @@
 ﻿ .Ftab {
         width:50%;
         text-align:center;
-            font-family: Arial, Helvetica, sans-serif; 
+            /*font-family: Arial, Helvetica, sans-serif;*/ 
     }
     .bt {
     position: absolute;
@@ -10,7 +10,7 @@
 }
   .w{
      margin-top:20px; 
-     color:#777;
+     /*color:#777;*/
         
   }
     .btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
@@ -34,3 +34,29 @@
 	margin: 0px 8px;
 }
 
+ .c{
+     padding-left: 10px;
+     
+ }
+ .ct{
+     margin-left: 10px;
+     width: 60%;
+ }
+
+ .g {
+  height:17px;
+  border: 0;
+  width: calc(100% - 2px);
+  margin-left:1px;
+  box-shadow: -8px 10px 0px -7px #ebebeb, 8px 10px 0px -7px #ebebeb;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+.g:focus {
+  outline: none;
+  box-shadow: -8px 10px 0px -7px #4EA6EA, 8px 10px 0px -7px #4EA6EA;
+}
+
+.child {
+    display: none;
+}

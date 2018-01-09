@@ -18,15 +18,9 @@
 
 //console.log("height", window.innerHeight);
 
-
-
-
-
-$(function () {
-    $('#datetimepicker4').datepicker();
-});
 //Split(['#eight', '#nine'], {
 //    direction: 'vertical'
 //    //sizes: ['200px', '500px']
 
 //});
+
